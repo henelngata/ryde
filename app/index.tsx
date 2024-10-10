@@ -1,15 +1,11 @@
 import { Text, View } from 'react-native'
 import React, { Component } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
+import { Redirect } from 'expo-router'
+import Swiper from "react-native-swiper"
 
-export class index extends Component {
-  render() {
-    return (
-      <SafeAreaView>
-        <Text>Hello react native</Text>
-      </SafeAreaView>
-    )
-  }
+export default function Page() {
+  const swiperRef = useRef<Swiper>(null);
+  
+  return <Redirect href="/(auth)/welcome" />
 }
-
-export default index
